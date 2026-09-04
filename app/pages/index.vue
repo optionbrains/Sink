@@ -5,478 +5,180 @@ definePageMeta({
 })
 
 useSeoMeta({
-  title: 'OptionBrains Links',
-  description: 'One link. Every possibility. Smart, secure links powered by OptionBrains.',
+  title: 'Thank You | OptionBrains Capital',
+  description: 'Thank you for visiting OptionBrains Capital Private Limited.',
 })
 
 const year = new Date().getFullYear()
 </script>
 
 <template>
-  <div class="brand-page">
-    <div class="brand-page__glow brand-page__glow--blue" />
-    <div class="brand-page__glow brand-page__glow--gold" />
-    <div class="brand-page__grid" />
+  <main class="welcome-page">
+    <div class="welcome-page__glow welcome-page__glow--blue" />
+    <div class="welcome-page__glow welcome-page__glow--gold" />
+    <div class="welcome-page__grid" />
 
-    <header class="brand-header">
-      <NuxtLink to="/" class="brand-lockup" aria-label="OptionBrains Links home">
-        <img src="/optionbrains-mark.svg" alt="" width="48" height="48">
-        <span>
-          <strong>OptionBrains</strong>
-          <small>SMART LINKS</small>
-        </span>
-      </NuxtLink>
+    <section class="welcome-card">
+      <img
+        src="/optionbrains-logo.png"
+        alt="OptionBrains Capital"
+        width="360"
+        height="110"
+        class="welcome-logo"
+      >
 
-      <NuxtLink to="/dashboard" class="header-action">
-        Dashboard
-        <span aria-hidden="true">↗</span>
-      </NuxtLink>
-    </header>
+      <p class="company-name">
+        OPTIONBRAINS CAPITAL PRIVATE LIMITED
+      </p>
 
-    <main class="brand-main">
-      <section class="brand-hero">
-        <p class="eyebrow">
-          <span />
-          Short links powered by OptionBrains
-        </p>
+      <h1>Thank you for visiting OptionBrains Capital.</h1>
 
-        <h1>
-          One link.<br>
-          <em>Every possibility.</em>
-        </h1>
+      <p class="welcome-copy">
+        Discover structured research, thoughtful market insights and everything
+        OptionBrains has built for informed traders and investors.
+      </p>
 
-        <p class="hero-copy">
-          Research, model portfolios and every opportunity—connected through
-          simple, intelligent links built to be shared.
-        </p>
+      <a
+        href="https://optionbrains.com"
+        class="visit-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit OptionBrains
+        <span aria-hidden="true">→</span>
+      </a>
 
-        <div class="hero-actions">
-          <a
-            href="https://optionbrains.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="primary-action"
-          >
-            Explore OptionBrains
-            <span aria-hidden="true">→</span>
-          </a>
-          <NuxtLink to="/dashboard" class="secondary-action">
-            Manage links
-          </NuxtLink>
-        </div>
-
-        <ul class="feature-list" aria-label="Link platform features">
-          <li><span>✓</span> Secure redirects</li>
-          <li><span>✓</span> Smart analytics</li>
-          <li><span>✓</span> Built for sharing</li>
-        </ul>
-      </section>
-
-      <aside class="link-card" aria-hidden="true">
-        <div class="link-card__top">
-          <span class="link-card__mark">
-            <img src="/optionbrains-mark.svg" alt="" width="30" height="30">
-          </span>
-          <span class="link-card__status">LIVE</span>
-        </div>
-        <p class="link-card__label">
-          YOUR SMART LINK
-        </p>
-        <div class="link-card__url">
-          <span>go.optionbrains.com/</span><strong>possibility</strong>
-        </div>
-        <div class="link-card__line" />
-        <div class="link-card__stats">
-          <span><strong>Fast</strong><small>Global redirect</small></span>
-          <span><strong>Clear</strong><small>Useful insights</small></span>
-          <span><strong>Simple</strong><small>Easy to share</small></span>
-        </div>
-      </aside>
-    </main>
-
-    <footer class="brand-footer">
-      <p>© {{ year }} OptionBrains Capital Private Limited</p>
-      <p>Simple links. Meaningful connections.</p>
-    </footer>
-  </div>
+      <p class="legal">
+        © {{ year }} OptionBrains Capital Private Limited
+      </p>
+    </section>
+  </main>
 </template>
 
 <style scoped>
-.brand-page {
+.welcome-page {
   position: relative;
-  display: flex;
+  display: grid;
   min-height: 100svh;
-  flex-direction: column;
   overflow: hidden;
+  place-items: center;
+  padding: 2rem;
   color: #f8fbff;
   background: #050b18;
 }
 
-.brand-page__glow,
-.brand-page__grid {
+.welcome-page__glow,
+.welcome-page__grid {
   position: absolute;
   pointer-events: none;
 }
 
-.brand-page__glow {
+.welcome-page__glow {
   width: 42rem;
   height: 42rem;
   border-radius: 999px;
-  filter: blur(100px);
+  filter: blur(110px);
 }
 
-.brand-page__glow--blue {
-  top: -22rem;
-  left: -15rem;
-  background: rgb(31 111 235 / 32%);
+.welcome-page__glow--blue {
+  top: -25rem;
+  left: -18rem;
+  background: rgb(38 111 226 / 32%);
 }
 
-.brand-page__glow--gold {
-  right: -18rem;
-  bottom: -25rem;
-  background: rgb(218 163 52 / 22%);
+.welcome-page__glow--gold {
+  right: -20rem;
+  bottom: -27rem;
+  background: rgb(225 171 57 / 24%);
 }
 
-.brand-page__grid {
+.welcome-page__grid {
   inset: 0;
-  opacity: 0.04;
+  opacity: 0.035;
   background-image:
     linear-gradient(rgb(255 255 255 / 80%) 1px, transparent 1px),
     linear-gradient(90deg, rgb(255 255 255 / 80%) 1px, transparent 1px);
   background-size: 52px 52px;
-  mask-image: linear-gradient(to bottom, black, transparent 88%);
+  mask-image: radial-gradient(circle at center, black, transparent 78%);
 }
 
-.brand-header,
-.brand-main,
-.brand-footer {
+.welcome-card {
   position: relative;
   z-index: 1;
-  width: min(100% - 3rem, 72rem);
-  margin-inline: auto;
-}
-
-.brand-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-block: 1.5rem;
-}
-
-.brand-lockup {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.brand-lockup img {
-  width: 3rem;
-  height: 3rem;
-  filter: drop-shadow(0 8px 22px rgb(32 112 238 / 30%));
-}
-
-.brand-lockup span {
-  display: flex;
+  width: min(100%, 47rem);
   flex-direction: column;
-}
-
-.brand-lockup strong {
-  font-size: 1.1rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.brand-lockup small {
-  margin-top: 0.32rem;
-  color: #8ebcff;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.26em;
-}
-
-.header-action,
-.secondary-action {
-  border: 1px solid rgb(255 255 255 / 14%);
-  color: #e7eefb;
-  background: rgb(255 255 255 / 5%);
-  backdrop-filter: blur(12px);
-}
-
-.header-action {
-  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  border-radius: 999px;
-  padding: 0.65rem 1rem;
-  font-size: 0.84rem;
-  font-weight: 600;
-  transition: 180ms ease;
+  text-align: center;
 }
 
-.header-action:hover,
-.secondary-action:hover {
-  border-color: rgb(255 255 255 / 28%);
-  background: rgb(255 255 255 / 10%);
+.welcome-logo {
+  width: min(100%, 22rem);
+  height: auto;
+  filter: drop-shadow(0 20px 35px rgb(21 94 198 / 35%));
 }
 
-.brand-main {
-  display: grid;
-  flex: 1;
-  grid-template-columns: minmax(0, 1.35fr) minmax(19rem, 0.65fr);
-  align-items: center;
-  gap: 5rem;
-  padding-block: 5rem 7rem;
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin-bottom: 1.75rem;
-  border: 1px solid rgb(92 158 255 / 20%);
-  border-radius: 999px;
-  padding: 0.55rem 0.85rem;
-  color: #b8d3ff;
-  background: rgb(45 116 222 / 10%);
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.eyebrow span {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 999px;
-  background: #e9b13e;
-  box-shadow: 0 0 14px rgb(233 177 62 / 90%);
+.company-name {
+  margin-top: 1.8rem;
+  color: #e6b856;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
 }
 
 h1 {
-  max-width: 50rem;
-  font-size: clamp(3.5rem, 7vw, 6.7rem);
-  line-height: 0.94;
+  max-width: 45rem;
+  margin-top: 1rem;
+  font-size: clamp(2.7rem, 6vw, 5.5rem);
+  line-height: 1;
   font-weight: 850;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.055em;
 }
 
-h1 em {
-  color: transparent;
-  background: linear-gradient(100deg, #6da7ff 8%, #e8bb59 94%);
-  background-clip: text;
-  font-style: normal;
+.welcome-copy {
+  max-width: 38rem;
+  margin-top: 1.6rem;
+  color: #a7b5ca;
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  line-height: 1.75;
 }
 
-.hero-copy {
-  max-width: 40rem;
-  margin-top: 1.8rem;
-  color: #aab7cc;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.7;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 2.2rem;
-}
-
-.primary-action,
-.secondary-action {
+.visit-button {
   display: inline-flex;
-  min-height: 3.2rem;
+  min-height: 3.35rem;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  border-radius: 0.85rem;
-  padding: 0.75rem 1.25rem;
-  font-size: 0.9rem;
-  font-weight: 700;
+  gap: 0.85rem;
+  margin-top: 2.3rem;
+  border-radius: 0.9rem;
+  padding: 0.8rem 1.45rem;
+  color: #071020;
+  background: linear-gradient(100deg, #78aeff, #e8bb59);
+  box-shadow: 0 18px 50px rgb(40 108 216 / 30%);
+  font-size: 0.92rem;
+  font-weight: 800;
   transition: 180ms ease;
 }
 
-.primary-action {
-  color: #071020;
-  background: linear-gradient(100deg, #77adff, #e9bd5d);
-  box-shadow: 0 16px 45px rgb(41 111 220 / 26%);
-}
-
-.primary-action:hover {
+.visit-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 55px rgb(41 111 220 / 38%);
+  box-shadow: 0 22px 60px rgb(40 108 216 / 42%);
 }
 
-.feature-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.6rem;
-  margin-top: 2.4rem;
-  color: #8290a7;
-  font-size: 0.78rem;
-}
-
-.feature-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.feature-list span {
-  color: #e9b13e;
-}
-
-.link-card {
-  position: relative;
-  transform: rotate(2deg);
-  border: 1px solid rgb(255 255 255 / 12%);
-  border-radius: 1.5rem;
-  padding: 1.35rem;
-  background: linear-gradient(145deg, rgb(17 33 61 / 88%), rgb(8 17 34 / 88%));
-  box-shadow: 0 35px 90px rgb(0 0 0 / 40%);
-  backdrop-filter: blur(20px);
-}
-
-.link-card::before {
-  position: absolute;
-  z-index: -1;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(120deg, rgb(98 159 255 / 35%), transparent 45%, rgb(230 176 62 / 22%));
-  content: '';
-  filter: blur(16px);
-}
-
-.link-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.link-card__mark {
-  display: grid;
-  width: 2.7rem;
-  height: 2.7rem;
-  place-items: center;
-  border-radius: 0.85rem;
-  background: rgb(255 255 255 / 7%);
-}
-
-.link-card__status {
-  border: 1px solid rgb(89 209 148 / 24%);
-  border-radius: 999px;
-  padding: 0.35rem 0.55rem;
-  color: #80dfac;
-  background: rgb(89 209 148 / 8%);
-  font-size: 0.58rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-}
-
-.link-card__label {
-  margin-top: 2.5rem;
-  color: #6f809a;
-  font-size: 0.57rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-}
-
-.link-card__url {
-  overflow: hidden;
-  margin-top: 0.55rem;
-  font-size: 1rem;
-  letter-spacing: -0.02em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.link-card__url span {
-  color: #71829d;
-}
-
-.link-card__url strong {
-  color: #f4c86c;
-}
-
-.link-card__line {
-  height: 1px;
-  margin-block: 2.2rem 1.3rem;
-  background: linear-gradient(90deg, rgb(255 255 255 / 14%), transparent);
-}
-
-.link-card__stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-
-.link-card__stats span {
-  display: flex;
-  flex-direction: column;
-}
-
-.link-card__stats strong {
-  color: #dfe8f7;
-  font-size: 0.76rem;
-}
-
-.link-card__stats small {
-  margin-top: 0.3rem;
-  color: #687993;
-  font-size: 0.58rem;
-}
-
-.brand-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  border-top: 1px solid rgb(255 255 255 / 7%);
-  padding-block: 1.3rem;
-  color: #57677e;
+.legal {
+  margin-top: 3.5rem;
+  color: #586a84;
   font-size: 0.68rem;
 }
 
-@media (max-width: 860px) {
-  .brand-main {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    padding-block: 4rem;
+@media (max-width: 520px) {
+  .welcome-page {
+    padding: 1.25rem;
   }
 
-  .link-card {
-    width: min(100%, 26rem);
-    transform: none;
-  }
-}
-
-@media (max-width: 540px) {
-  .brand-header,
-  .brand-main,
-  .brand-footer {
-    width: min(100% - 2rem, 72rem);
-  }
-
-  .brand-lockup strong {
-    font-size: 1rem;
-  }
-
-  .header-action {
-    padding-inline: 0.8rem;
-  }
-
-  .brand-main {
-    padding-block: 3.5rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .primary-action,
-  .secondary-action {
-    width: 100%;
-  }
-
-  .brand-footer {
-    flex-direction: column;
+  .company-name {
+    max-width: 20rem;
+    line-height: 1.7;
   }
 }
 </style>
