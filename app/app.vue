@@ -5,18 +5,20 @@ const { title, description, image } = useAppConfig()
 const route = useRoute()
 const localeHead = useLocaleHead()
 const colorMode = useColorMode()
+const requestUrl = useRequestURL()
+const shareImage = computed(() => new URL(image, requestUrl.origin).toString())
 
 useSeoMeta({
-  title: `${title} - Link Shortener with Analytics`,
+  title: `${title} — Smart links by OptionBrains`,
   description,
   ogType: 'website',
   ogTitle: title,
   ogSiteName: title,
   ogDescription: description,
-  ogImage: image,
+  ogImage: shareImage,
   twitterTitle: title,
   twitterDescription: description,
-  twitterImage: image,
+  twitterImage: shareImage,
   twitterCard: 'summary_large_image',
 })
 
@@ -35,16 +37,16 @@ useHead(() => ({
   link: [
     {
       rel: 'canonical',
-      href: computed(() => `https://sink.cool${route.path}`),
+      href: `${requestUrl.origin}${route.path}`,
     },
     {
       rel: 'icon',
-      type: 'image/png',
-      href: '/icon-192.png',
+      type: 'image/svg+xml',
+      href: '/optionbrains-mark.svg',
     },
     {
       rel: 'apple-touch-icon',
-      href: '/apple-touch-icon.png',
+      href: '/optionbrains-mark.svg',
     },
   ],
 }))

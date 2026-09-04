@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">OptionBrains</title>
+  <defs>
+    <linearGradient id="ring" x1="18" y1="12" x2="79" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#edc15f"/>
+      <stop offset=".42" stop-color="#b67a1f"/>
+      <stop offset=".5" stop-color="#448ff4"/>
+      <stop offset="1" stop-color="#164f9f"/>
+    </linearGradient>
+    <linearGradient id="letters" x1="25" y1="27" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f4d477"/>
+      <stop offset=".46" stop-color="#d69a31"/>
+      <stop offset=".5" stop-color="#68a8ff"/>
+      <stop offset="1" stop-color="#2869bf"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000b20" flood-opacity=".48"/>
+    </filter>
+  </defs>
+  <circle cx="48" cy="48" r="43" fill="#071326" stroke="url(#ring)" stroke-width="3"/>
+  <path d="M24 28c4-9 13-15 24-15 8 0 15 3 20 8" fill="none" stroke="#e9b64d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M72 68c-5 9-14 15-25 15-8 0-15-3-20-8" fill="none" stroke="#3d86e7" stroke-width="4" stroke-linecap="round"/>
+  <g filter="url(#shadow)" fill="none" stroke="url(#letters)" stroke-linecap="round" stroke-linejoin="round" stroke-width="7">
+    <path d="M45 29H35c-10 0-17 8-17 19s7 19 17 19h10V29Z"/>
+    <path d="M47 29h11c9 0 15 4 15 11 0 5-3 9-8 10 7 1 11 5 11 11 0 8-7 12-17 12H47V29Z"/>
+    <path d="M48 50h15"/>
+  </g>
+</svg>
